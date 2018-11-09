@@ -41,9 +41,3 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3893133733
-    locked: 0
-  - name: Droplet
-    uniqueID: 1335227569
-    locked: 0
