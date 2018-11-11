@@ -6,7 +6,6 @@ public class char_behaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
 	}
 	
 	// Update is called once per frame

@@ -12,6 +12,7 @@ public class collect_drops : MonoBehaviour {
 		if(cam == null){
 			cam = Camera.main;
 		}
+		//translate screen space > ScreenToWorldPoint: transforms pos from screen space to world space
 		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
 		Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
 		float dropWidth = drop.GetComponent<Renderer>().bounds.extents.x;
