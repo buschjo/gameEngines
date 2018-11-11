@@ -41,9 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Player
-    uniqueID: 3893133733
+  - name: Background
+    uniqueID: 225766413
     locked: 0
-  - name: Droplet
-    uniqueID: 1335227569
+  - name: Foreground
+    uniqueID: 2570594619
     locked: 0
