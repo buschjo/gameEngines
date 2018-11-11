@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class coll_behaviour : MonoBehaviour {
+public class Coll_behaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision){
 			Destroy(collision.gameObject);
