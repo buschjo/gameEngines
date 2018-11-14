@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+//META FILE TEST
 public class Score : MonoBehaviour {
 
-	public Text scoreText;
+	public Text scoreText; 
 	public int amountOfDrops;
 	private int score;
 
