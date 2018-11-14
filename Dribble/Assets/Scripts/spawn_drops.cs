@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Spawn_drops : MonoBehaviour {
-	public Camera cam;
+	public Camera cam; 
 	//drop is prefab, template for a game object
 	public GameObject drop;
 	public float timeRemaining;
