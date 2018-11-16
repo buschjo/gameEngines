@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Spawn_drops : MonoBehaviour {
+public class SpawnDrops : MonoBehaviour {
 	public Camera cam; 
 	//drop is prefab, template for a game object
 	public GameObject drop;
