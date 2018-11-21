@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharBehaviour : MonoBehaviour {
 
+	[SerializeField]
 	public float speed = 10.0f;
 
 	void Start () {
@@ -12,15 +13,10 @@ public class CharBehaviour : MonoBehaviour {
 	// Update is called once per frame 
 	void Update () {
 		if(Input.GetKey(KeyCode.LeftArrow)){
-			Vector3 position = this.transform.position;
-			position.x -= speed * Time.deltaTime;
-			this.transform.position = position;
+			transform.position -= new Vector3(speed * Time.deltaTime,0,0);
 		}
-		
 		if(Input.GetKey(KeyCode.RightArrow)){
-			Vector3 position = this.transform.position;
-			position.x += speed * Time.deltaTime;
-			this.transform.position = position;
+			transform.position += new Vector3(speed * Time.deltaTime,0,0);
 		}
 	}
 }
