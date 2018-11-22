@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 5e3d4b861c380e444a38267d904dd8d2
+guid: f5d7550a24af40e40a44b689ea2d0200
 TextureImporter:
   fileIDToRecycleName:
-    21300000: droplet_0
-    21300002: droplet_1
-    21300004: droplet_2
-    21300006: droplet_3
-    21300008: droplet_4
+    21300000: droplet5_0
+    21300002: droplet5_1
+    21300004: droplet5_2
+    21300006: droplet5_3
+    21300008: droplet5_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -89,81 +89,101 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: droplet_0
+      name: droplet5_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 365
+        x: 0
+        y: 35
         width: 130
         height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5aa5c388ca72c5a4c8f3088d61539d80
+      spriteID: bda800b96b2b3644b8ef6c75cdf6342b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: droplet_1
+      name: droplet5_1
       rect:
         serializedVersion: 2
-        x: 137
-        y: 365
+        x: 130
+        y: 35
         width: 130
         height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff4c86c884f6bc7409ad24c3390aa30c
+      spriteID: fd420d4f453c6474d95a055e4010c246
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: droplet_2
+      name: droplet5_2
       rect:
         serializedVersion: 2
-        x: 266
-        y: 365
+        x: 260
+        y: 35
         width: 130
         height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91c2479e646101642be1587ca3fdccf2
+      spriteID: b6937a923d4741f4e93d60e4967ba86e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: droplet_3
+      name: droplet5_3
       rect:
         serializedVersion: 2
-        x: 434
-        y: 365
+        x: 433
+        y: 35
         width: 130
         height: 115
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a5c5af371ad03f44939a539ffea67b3
+      spriteID: 305eb7dd4dbbeaa4baa9ef9ab4341eae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: droplet5_5
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 35
+        width: 130
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7803efc7d32a5ef4f91f19d85a7be4b0
       vertices: []
       indices: 
       edges: []
@@ -171,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 7e5ee39f218dae6478282e91b63dcdfc
+    spriteID: 6ce5dcd659b3fed49ac3804c64442a4a
     vertices: []
     indices: 
     edges: []
