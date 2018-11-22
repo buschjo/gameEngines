@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CollBehaviour : MonoBehaviour {
+public class DropCollisionBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision){
-			Destroy(collision.gameObject); 
+		Destroy(gameObject); 
 	}
 }

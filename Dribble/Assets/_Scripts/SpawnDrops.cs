@@ -43,11 +43,10 @@ public class SpawnDrops : MonoBehaviour {
 	IEnumerator Spawn(){
 		yield return new WaitForSeconds (2.0f);
 		while(timeRemaining > 0){
-			Vector3 spawnPos = new Vector3(Random.Range(-maxWidth,maxWidth), transform.position.y,0.0f);
+			Vector3 spawnPos = new Vector3(Random.Range(-maxWidth,maxWidth/2), transform.position.y,0.0f);
 
 			//used to represent rotation, "identitiy" essentially means no rotation
-			Quaternion spawnRot = Quaternion.identity;
-			Instantiate(drop, spawnPos, spawnRot);
+			Instantiate(drop, spawnPos, Quaternion.identity);
 			//so we don't freeze programme with infinite loop, wait between 1 and 2 seconds before starting loop again
 			yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
 		}
