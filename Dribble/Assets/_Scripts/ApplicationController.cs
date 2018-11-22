@@ -5,7 +5,9 @@ using UnityEngine;
 public class ApplicationController : Singleton<ApplicationController> {
 
 	[SerializeField]
-	int startTime;
+	float startTime;
+	private float remainingTime;
+	private int score;
 
 	// Use this for initialization
 	void Start () {
@@ -16,4 +18,10 @@ public class ApplicationController : Singleton<ApplicationController> {
 	void Update () {
 		
 	}
+
+	void increaseScore(){
+		score++;
+	}
+
+
 }

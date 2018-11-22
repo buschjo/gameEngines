@@ -43,7 +43,8 @@ public class SpawnDrops : MonoBehaviour {
 	IEnumerator Spawn(){
 		yield return new WaitForSeconds (2.0f);
 		while(timeRemaining > 0){
-			Vector3 spawnPos = new Vector3(Random.Range(-maxWidth,maxWidth/2), transform.position.y,0.0f);
+			float dropHeight = drop.GetComponent<Renderer>().bounds.extents.y*2;
+			Vector3 spawnPos = new Vector3(Random.Range(-maxWidth,maxWidth/2), transform.position.y-dropHeight,0.0f);
 
 			//used to represent rotation, "identitiy" essentially means no rotation
 			Instantiate(drop, spawnPos, Quaternion.identity);
