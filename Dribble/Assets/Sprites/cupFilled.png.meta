@@ -1,8 +1,12 @@
 fileFormatVersion: 2
-guid: 151126268716af945b67511d41a93171
+guid: 0291ecbbec58c204aa1ef9db4010cb64
 TextureImporter:
   fileIDToRecycleName:
-    21300000: cupNew_0
+    21300000: cupFilled_0
+    21300002: cupFilled_1
+    21300004: cupFilled_3
+    21300006: cupFilled_4
+    21300008: cupFilled_5
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -85,13 +89,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cupNew_0
+      name: cupFilled_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 287
-        width: 130
-        height: 180
+        x: 18
+        y: 0
+        width: 140
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -99,7 +103,87 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 247901801859e664d80a5129074279ac
+      spriteID: 392dd93bc30a55843a3f85318a41d36d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupFilled_1
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171264782c75ddf4b9d4be3e40c19bbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupFilled_3
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48de331e3a59c26419862861f2ccd3e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupFilled_4
+      rect:
+        serializedVersion: 2
+        x: 544
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 344363dad6c7dbd48ab5bcb56decbc1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cupFilled_5
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 0
+        width: 140
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 002b14d55ce08264ba88342624a54d32
       vertices: []
       indices: 
       edges: []
@@ -107,7 +191,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 802c107cff7ba5740a5ba3d248264414
+    spriteID: e8234c63608e3d84395d61ae8a98dae2
     vertices: []
     indices: 
     edges: []
