@@ -13,11 +13,11 @@ public class CharBehaviour : MonoBehaviour {
 	// Update is called once per frame 
 	void Update () {
 		if(Input.GetKey(KeyCode.LeftArrow)){
-			if(transform.position.x <= 0){
+			// if(transform.position.x <= 0){
 				//do nothing
-			}else{
+			// }else{
 				transform.position -= new Vector3(speed * Time.deltaTime,0,0);
-			}
+			// }
 		}
 		if(Input.GetKey(KeyCode.RightArrow)){
 			transform.position += new Vector3(speed * Time.deltaTime,0,0);
