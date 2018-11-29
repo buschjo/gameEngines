@@ -7,7 +7,7 @@ public class ApplicationController : Singleton<ApplicationController> {
 	[SerializeField]
 	float startTime;
 	private float remainingTime;
-	private int score;
+	public int score;
 	public float gameAreaWidth;
 	public float dropAreaHeight;
 	public float bathroomAreaWidth;
