@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ApplicationController : Singleton<ApplicationController> {
 
@@ -9,20 +10,18 @@ public class ApplicationController : Singleton<ApplicationController> {
 	private float remainingTime;
 	public int score;
 	public float gameAreaWidth;
-	public float dropAreaHeight;
 	public float bathroomAreaWidth;
-	private float bathroomAreaHeight;
 	public Camera cam; 
+	public Text scoreText; 
 
 	// Use this for initialization
 	void Start () {
-		bathroomAreaWidth = 5;
 		if(cam == null){
 			cam = Camera.main;
 		}
-		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
-		Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
-		gameAreaWidth = targetWidth.x;
+		bathroomAreaWidth = 5;
+		gameAreaWidth = ExtractDropAreaWidth();
+
 	}
 	
 	// Update is called once per frame
@@ -31,16 +30,24 @@ public class ApplicationController : Singleton<ApplicationController> {
 	}
 
 	public void IncreaseScore(){
+		Debug.Log("score: "+ score);
 		score++;
+		UpdateScore();
 	}
 
-	// public float ExtractDropAreaWidth(){
-	// 	Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
-	// 	Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
-	// 	float dropWidth = drop.GetComponent<Renderer>().bounds.extents.x;
-	// 	Debug.Log("Initial width");
-	// 	Debug.Log(targetWidth.x - dropWidth);
-	// 	return targetWidth.x - dropWidth;
-	// }
+	void UpdateScore(){
+		Debug.Log(ApplicationController.Instance.score);
+		scoreText.text = "Score:\n" + ApplicationController.Instance.score;
+	}
+
+	public void EmptyCup(){
+		score = 0;
+		UpdateScore();
+	}
+
+	public float ExtractDropAreaWidth(){
+		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
+		return cam.ScreenToWorldPoint(upperCorner).x;
+	}
 
 }

@@ -42,6 +42,9 @@ public class CharBehaviour : MonoBehaviour {
 			if(ApplicationController.Instance.score > 0){
 				animator.SetTrigger("firstBlood");
 			}
+			if(ApplicationController.Instance.score == 0){
+				animator.SetTrigger("emptyCup");
+			}
 		}else{
 			animator.SetTrigger("spill");
 		}
