@@ -23,20 +23,13 @@ public class ApplicationController : Singleton<ApplicationController> {
 		gameAreaWidth = ExtractDropAreaWidth();
 
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public void IncreaseScore(){
-		Debug.Log("score: "+ score);
 		score++;
 		UpdateScore();
 	}
 
 	void UpdateScore(){
-		Debug.Log(ApplicationController.Instance.score);
 		scoreText.text = "Score:\n" + ApplicationController.Instance.score;
 	}
 

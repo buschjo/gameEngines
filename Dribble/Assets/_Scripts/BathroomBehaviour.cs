@@ -10,7 +10,11 @@ public class BathroomBehaviour : MonoBehaviour {
 
 	void OnMouseDown ()
     {
-		Debug.Log("Empty the Cup");
         ApplicationController.Instance.EmptyCup();
+		DestroyObject();
     }
+
+	void DestroyObject(){
+		Destroy(gameObject);
+	}
 }

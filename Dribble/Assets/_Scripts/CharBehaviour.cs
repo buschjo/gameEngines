@@ -47,6 +47,7 @@ public class CharBehaviour : MonoBehaviour {
 			}
 		}else{
 			animator.SetTrigger("spill");
+			//Game Ovaries
 		}
 	}
 
