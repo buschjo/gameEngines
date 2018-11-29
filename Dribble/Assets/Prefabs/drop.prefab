@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 95837525897577908}
   - component: {fileID: 114373879729789046}
   m_Layer: 0
-  m_Name: Drop
+  m_Name: drop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -143,7 +143,7 @@ SpriteRenderer:
   m_SortingLayerID: -1724372677
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 5e3d4b861c380e444a38267d904dd8d2, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -151,6 +151,6 @@ SpriteRenderer:
   m_Size: {x: 1.3, y: 1.15}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

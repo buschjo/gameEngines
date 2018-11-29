@@ -17,7 +17,7 @@ public class DrippingBehaviour : MonoBehaviour {
 			Destroy(GetComponent<Rigidbody2D>());
 			animator.SetTrigger("scatter");
 		}
-		 
+		
 	}
 
 	void DestroyObject(){
