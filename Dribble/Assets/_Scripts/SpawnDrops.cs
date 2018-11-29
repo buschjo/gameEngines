@@ -5,24 +5,20 @@ using UnityEngine.UI;
 
 public class SpawnDrops : MonoBehaviour {
 	public Camera cam; 
-	//drop is prefab, template for a game object
 	public GameObject drop;
 	public float timeRemaining;
 	public Text timerText;
-	//width of game area
-	private float maxWidth;
+	private float dropAreaWidth;
 
 	void Start () {
 		if(cam == null){
 			cam = Camera.main;
 		}
-		//use Screen class to find corners of screen
-		//translate screen space > ScreenToWorldPoint: transforms pos from screen space to world space
 		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
 		Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
 		//find drop by using renderer to get the bounds/size of it
 		float dropWidth = drop.GetComponent<Renderer>().bounds.extents.x;
-		maxWidth = targetWidth.x - dropWidth;
+		dropAreaWidth = targetWidth.x - dropWidth;
 		StartCoroutine(Spawn());
 		UpdateTimerText();
 	}
@@ -44,7 +40,7 @@ public class SpawnDrops : MonoBehaviour {
 		yield return new WaitForSeconds (2.0f);
 		while(timeRemaining > 0){
 			float dropHeight = drop.GetComponent<Renderer>().bounds.extents.y*2;
-			Vector3 spawnPos = new Vector3(Random.Range(-maxWidth,maxWidth/2), transform.position.y,0.0f);
+			Vector3 spawnPos = new Vector3(Random.Range(-dropAreaWidth,dropAreaWidth/2), transform.position.y,0.0f);
 
 			//used to represent rotation, "identitiy" essentially means no rotation
 			Instantiate(drop, spawnPos, Quaternion.identity);

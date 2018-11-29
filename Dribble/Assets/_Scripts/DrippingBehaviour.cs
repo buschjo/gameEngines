@@ -11,7 +11,7 @@ public class DrippingBehaviour : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision){
 		if(collision.gameObject.tag == "cup"){
-			// ApplicationController.Instance
+			ApplicationController.Instance.IncreaseScore();
 			DestroyObject();	
 		}else{
 			Destroy(GetComponent<Rigidbody2D>());
