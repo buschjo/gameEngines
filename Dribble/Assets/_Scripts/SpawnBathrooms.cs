@@ -18,12 +18,12 @@ public class SpawnBathrooms : MonoBehaviour {
 	}
 
 	void setBoundaries(){
-		float iconWidth = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.x;
-		float iconHeight = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.y;
-		xLeftBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x+iconWidth;
-		xRightBoundary = ApplicationController.Instance.upperRightBoundary.transform.position.x-iconWidth;
-		yUpperBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.y-iconHeight;
-		yLowerBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.y+iconHeight;
+		float spriteWidth = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.x;
+		float spriteHeight = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.y;
+		xLeftBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x+spriteWidth;
+		xRightBoundary = ApplicationController.Instance.upperRightBoundary.transform.position.x-spriteWidth;
+		yUpperBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.y-spriteHeight;
+		yLowerBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.y+spriteHeight;
 	}
 
 	IEnumerator Spawn(){

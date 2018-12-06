@@ -4,23 +4,24 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class SpawnDrops : MonoBehaviour {
-	public Camera cam; 
 	public GameObject drop;
 	public Text timerText;
-	private float dropAreaWidth;
+	private float xLeftBoundary;
+    private float xRightBoundary;
 	public float timeRemaining;
 
 	void Start () {
-		if(cam == null){
-			cam = Camera.main;
-		}
-		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
-		Vector3 targetWidth = cam.ScreenToWorldPoint(upperCorner);
-		float dropWidth = drop.GetComponent<Renderer>().bounds.extents.x;
-		dropAreaWidth = targetWidth.x - dropWidth;
+		setBoundaries();
 		StartCoroutine(Spawn());
 		UpdateTimerText();
 	}
+
+	void setBoundaries(){
+		float spriteWidth = drop.GetComponent<Renderer>().bounds.extents.x;
+		xLeftBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.x+spriteWidth*2;
+		xRightBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x-spriteWidth*2;
+	}
+
 
 	void FixedUpdate(){
 		timeRemaining -= Time.deltaTime;
@@ -33,7 +34,7 @@ public class SpawnDrops : MonoBehaviour {
 	IEnumerator Spawn(){
 		yield return new WaitForSeconds (2.0f);
 		while(timeRemaining > 0){
-			Vector3 spawnPos = new Vector3(Random.Range(-dropAreaWidth,dropAreaWidth/2), transform.position.y,0.0f);
+			Vector3 spawnPos = new Vector3(Random.Range(xLeftBoundary,xRightBoundary), transform.position.y,0.0f);
 			//used to represent rotation, "identitiy" essentially means no rotation
 			Instantiate(drop, spawnPos, Quaternion.identity);
 			yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
