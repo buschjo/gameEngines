@@ -13,6 +13,7 @@ public class ApplicationController : Singleton<ApplicationController> {
 	public float bathroomAreaWidth;
 	public Camera cam; 
 	public Text scoreText; 
+	public string character;
 
 	// Use this for initialization
 	void Start () {

@@ -7,6 +7,7 @@ TagManager:
   - floor
   - cup
   - pause
+  - gameover
   layers:
   - Default
   - TransparentFX
