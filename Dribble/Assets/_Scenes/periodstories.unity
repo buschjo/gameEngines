@@ -155,6 +155,34 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7ae64b9aaaf92949b726ac54cd5947a, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &168997499
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 168997500}
+  m_Layer: 0
+  m_Name: BathroomAreaUpperLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &168997500
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 168997499}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4, y: 8.59, z: 0.1875}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212682924
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d733b97140a375645aa248dc226d5eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   maleBathroomIcon: {fileID: 1154345174124210, guid: 0a9136dd87bab044ca848ef69fe2e933,
     type: 2}
   femaleBathroomIcon: {fileID: 1552709131558396, guid: 2e6cd09ec4c985a4ba53d19889bd1459,
@@ -202,6 +229,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &223947614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 223947615}
+  m_Layer: 0
+  m_Name: GameAreaUpperRight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &223947615
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 223947614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.24, y: 8.56, z: 0.09765625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &281232811
 GameObject:
@@ -430,7 +485,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b524a8796335e7c4ba09f5d1687df27b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
   drop: {fileID: 1920381373203206, guid: d7ae64b9aaaf92949b726ac54cd5947a, type: 2}
   timerText: {fileID: 347932520}
   timeRemaining: 100
@@ -761,6 +815,34 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &773719310
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773719311}
+  m_Layer: 0
+  m_Name: GameAreaLowerLeft
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773719311
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773719310}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.25, y: -0.69, z: 0.09765625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &832174927
 GameObject:
@@ -1550,10 +1632,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startTime: 0
   score: 0
-  gameAreaWidth: 0
-  bathroomAreaWidth: 0
-  cam: {fileID: 0}
   scoreText: {fileID: 1312192625}
+  lowerLeftBoundary: {fileID: 773719310}
+  upperRightBoundary: {fileID: 223947614}
+  bathroomAreaUpperLeftBoundary: {fileID: 168997499}
 --- !u!4 &1854329304
 Transform:
   m_ObjectHideFlags: 0

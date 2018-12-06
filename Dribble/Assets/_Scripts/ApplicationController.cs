@@ -9,21 +9,15 @@ public class ApplicationController : Singleton<ApplicationController> {
 	float startTime;
 	private float remainingTime;
 	public int score;
-	public float gameAreaWidth;
-	public float bathroomAreaWidth;
-	public Camera cam; 
-	public Text scoreText; 
 	public string character;
+	public Text scoreText;
+    public GameObject lowerLeftBoundary;
+	public GameObject upperRightBoundary;
+	public GameObject bathroomAreaUpperLeftBoundary;
 
-	// Use this for initialization
-	void Start () {
-		if(cam == null){
-			cam = Camera.main;
-		}
-		bathroomAreaWidth = 5;
-		gameAreaWidth = ExtractDropAreaWidth();
 
-	}
+    // Use this for initialization
+    void Start () {}
 
 	public void IncreaseScore(){
 		score++;
@@ -38,10 +32,4 @@ public class ApplicationController : Singleton<ApplicationController> {
 		score = 0;
 		UpdateScore();
 	}
-
-	public float ExtractDropAreaWidth(){
-		Vector3 upperCorner = new Vector3(Screen.width, Screen.height, 0.0f);
-		return cam.ScreenToWorldPoint(upperCorner).x;
-	}
-
 }

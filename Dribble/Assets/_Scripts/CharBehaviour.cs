@@ -8,10 +8,18 @@ public class CharBehaviour : MonoBehaviour {
 	public float speed = 10.0f;
 	[SerializeField]
 	private int maxCapacity = 10;
-
 	Animator animator;
-	void Start () {
+    private float xLeftBoundary;
+    private float xRightBoundary;
+
+    void Start () {
 		animator = GetComponent<Animator>();
+		setBoundaries();
+	}
+	void setBoundaries(){
+		float spriteWidth = GetComponent<SpriteRenderer>().bounds.size.x/2;
+		xLeftBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.x+spriteWidth;
+		xRightBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x-spriteWidth;
 	}
 	
 	// Update is called once per frame 
@@ -20,10 +28,10 @@ public class CharBehaviour : MonoBehaviour {
 		SetCupState();
 	}
 	void Move(){
-		if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= -ApplicationController.Instance.gameAreaWidth){
+		if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= xLeftBoundary){
 			transform.position -= new Vector3(speed * Time.deltaTime,0,0);
 		}
-		if(Input.GetKey(KeyCode.RightArrow) && transform.position.x <= ApplicationController.Instance.gameAreaWidth-ApplicationController.Instance.bathroomAreaWidth){
+		if(Input.GetKey(KeyCode.RightArrow) && transform.position.x <= xRightBoundary){
 			transform.position += new Vector3(speed * Time.deltaTime,0,0);
 		}
 	}
