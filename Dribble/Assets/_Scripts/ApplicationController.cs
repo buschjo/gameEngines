@@ -7,7 +7,7 @@ public class ApplicationController : Singleton<ApplicationController> {
 
 	[SerializeField]
 	public int cupFillAmount;
-	public int maxCapacity = 10;
+	public int maxCapacity;
 	public int gameScore;
 	public Text scoreText;
     public GameObject lowerLeftBoundary;
@@ -19,6 +19,7 @@ public class ApplicationController : Singleton<ApplicationController> {
     // Use this for initialization
     void Start () {
 		isRunning = true;
+		UpdateScore();
 	}
 
 	public void IncreaseScore(){
