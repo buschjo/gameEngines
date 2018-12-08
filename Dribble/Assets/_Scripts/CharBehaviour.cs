@@ -26,6 +26,7 @@ public class CharBehaviour : MonoBehaviour {
 		Move();
 		SetCupState();
 	}
+	
 	void Move(){
 		if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= xLeftBoundary){
 			transform.position -= new Vector3(speed * Time.deltaTime,0,0);

@@ -23,4 +23,11 @@ public class Statics : MonoBehaviour {
 		selectedCharacter = "male";
 		print(selectedCharacter);
 	}
+
+	#if UNITY_EDITOR
+     void Update()
+     {
+        selectedCharacter = "female";
+     }
+ 	#endif
 }

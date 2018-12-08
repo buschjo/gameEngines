@@ -8,6 +8,9 @@ TagManager:
   - cup
   - pause
   - gameover
+  - maleBathroom
+  - femaleBathroom
+  - nbBathroom
   layers:
   - Default
   - TransparentFX
