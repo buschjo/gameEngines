@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class ApplicationController : Singleton<ApplicationController> {
 
 	[SerializeField]
-	public int score;
+	public int cupFillAmount;
+	public int maxCapacity = 10;
+	public int gameScore;
 	public Text scoreText;
     public GameObject lowerLeftBoundary;
 	public GameObject upperRightBoundary;
@@ -20,16 +22,17 @@ public class ApplicationController : Singleton<ApplicationController> {
 	}
 
 	public void IncreaseScore(){
-		score++;
+		cupFillAmount++;
+		gameScore++;
 		UpdateScore();
 	}
 
 	void UpdateScore(){
-		scoreText.text = "Score:\n" + ApplicationController.Instance.score;
+		scoreText.text = "Score:" + gameScore + "\n Capacity: " + cupFillAmount + "/" + maxCapacity;
 	}
 
 	public void EmptyCup(){
-		score = 0;
+		cupFillAmount = 0;
 		UpdateScore();
 	}
 }

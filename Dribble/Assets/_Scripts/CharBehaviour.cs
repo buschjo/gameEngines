@@ -6,8 +6,6 @@ public class CharBehaviour : MonoBehaviour {
 
 	[SerializeField]
 	public float speed = 10.0f;
-	[SerializeField]
-	private int maxCapacity = 10;
 	Animator animator;
 	ApplicationController controller;
     private float xLeftBoundary;
@@ -37,20 +35,20 @@ public class CharBehaviour : MonoBehaviour {
 		}
 	}
 	void SetCupState(){
-		if(controller.score <= maxCapacity){
-			if(controller.score == maxCapacity){
+		if(controller.cupFillAmount <= controller.maxCapacity){
+			if(controller.cupFillAmount == controller.maxCapacity){
 				animator.SetTrigger("toTheBrimFull");
 			}
-			if(controller.score > maxCapacity/2){
+			if(controller.cupFillAmount > controller.maxCapacity/2){
 				animator.SetTrigger("almostFull");
 			}
-			if(controller.score > maxCapacity/4){
+			if(controller.cupFillAmount > controller.maxCapacity/4){
 				animator.SetTrigger("halfFull");
 			}
-			if(controller.score > 0){
+			if(controller.cupFillAmount > 0){
 				animator.SetTrigger("firstBlood");
 			}
-			if(controller.score == 0){
+			if(controller.cupFillAmount == 0){
 				animator.SetTrigger("emptyCup");
 			}
 		}else{

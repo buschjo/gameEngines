@@ -122,7 +122,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4886848492935574, guid: d7ae64b9aaaf92949b726ac54cd5947a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 3.7
       objectReference: {fileID: 0}
     - target: {fileID: 4886848492935574, guid: d7ae64b9aaaf92949b726ac54cd5947a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -216,7 +216,6 @@ MonoBehaviour:
     type: 2}
   nbBathroomIcon: {fileID: 1155283759895954, guid: 34e1798b091a4ad4784ed0edf35cac3f,
     type: 2}
-  timeRemaining: 10
 --- !u!4 &212682926
 Transform:
   m_ObjectHideFlags: 0
@@ -288,7 +287,7 @@ RectTransform:
   m_Children:
   - {fileID: 832174928}
   m_Father: {fileID: 929936588}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -381,83 +380,6 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 281232811}
   m_CullTransparentMesh: 0
---- !u!1 &347932518
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 347932519}
-  - component: {fileID: 347932521}
-  - component: {fileID: 347932520}
-  m_Layer: 5
-  m_Name: Timer
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &347932519
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347932518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 929936588}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -10, y: -10}
-  m_SizeDelta: {x: 180, y: 45}
-  m_Pivot: {x: 1, y: 1}
---- !u!114 &347932520
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347932518}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.59607846, g: 0.10980392, b: 0.10980392, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
-    m_FontStyle: 1
-    m_BestFit: 0
-    m_MinSize: 2
-    m_MaxSize: 40
-    m_Alignment: 1
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: 'Time Remaining:
-
-    ??'
---- !u!222 &347932521
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 347932518}
-  m_CullTransparentMesh: 0
 --- !u!1 &355127492
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +408,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   drop: {fileID: 1920381373203206, guid: d7ae64b9aaaf92949b726ac54cd5947a, type: 2}
-  timerText: {fileID: 347932520}
+  timerText: {fileID: 0}
   timeRemaining: 100
 --- !u!4 &355127494
 Transform:
@@ -630,7 +552,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 929936588}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1004,7 +926,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 347932519}
   - {fileID: 1312192624}
   - {fileID: 430325767}
   - {fileID: 1551831714}
@@ -1310,7 +1231,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
-  maxCapacity: 10
 --- !u!68 &1177100313
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1385,12 +1305,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 929936588}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
   m_AnchoredPosition: {x: 10, y: -10}
-  m_SizeDelta: {x: 80, y: 45}
+  m_SizeDelta: {x: 159.99, y: 74.09}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1312192625
 MonoBehaviour:
@@ -1424,9 +1344,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Score:
+  m_Text: 'Score:0
 
-    0'
+    Capacity: 0/0'
 --- !u!222 &1312192626
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1510,7 +1430,7 @@ RectTransform:
   m_Children:
   - {fileID: 1882404277}
   m_Father: {fileID: 929936588}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1630,12 +1550,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b922f2b953074884c870c0a4774306f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startTime: 0
-  score: 0
+  cupFillAmount: 0
+  maxCapacity: 10
+  gameScore: 0
   scoreText: {fileID: 1312192625}
   lowerLeftBoundary: {fileID: 773719310}
   upperRightBoundary: {fileID: 223947614}
   bathroomAreaUpperLeftBoundary: {fileID: 168997499}
+  character: 
+  isRunning: 0
 --- !u!4 &1854329304
 Transform:
   m_ObjectHideFlags: 0
@@ -1752,7 +1675,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 929936588}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
