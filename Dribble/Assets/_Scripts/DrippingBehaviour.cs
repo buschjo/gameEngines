@@ -18,7 +18,7 @@ public class DrippingBehaviour : MonoBehaviour {
 		}else{
 			Destroy(GetComponent<Rigidbody2D>());
 			animator.SetTrigger("scatter");
-			controller.isRunning = false;
+			//controller.isRunning = false;
 		}
 		
 	}

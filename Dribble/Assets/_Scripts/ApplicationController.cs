@@ -18,6 +18,8 @@ public class ApplicationController : Singleton<ApplicationController> {
 
     // Use this for initialization
     void Start () {
+		character = "female";
+		//character = Statics.selectedCharacter;
 		isRunning = true;
 		UpdateScore();
 	}

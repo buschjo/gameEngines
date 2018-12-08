@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 114414598158864196}
   m_Layer: 0
   m_Name: genderIcon_female
-  m_TagString: Untagged
+  m_TagString: femaleBathroom
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

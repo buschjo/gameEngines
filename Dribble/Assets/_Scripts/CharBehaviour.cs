@@ -39,7 +39,7 @@ public class CharBehaviour : MonoBehaviour {
 		if(controller.cupFillAmount <= controller.maxCapacity){
 			if(controller.cupFillAmount == controller.maxCapacity){
 				animator.SetTrigger("toTheBrimFull");
-			}
+			} 
 			if(controller.cupFillAmount > controller.maxCapacity/2){
 				animator.SetTrigger("almostFull");
 			}
