@@ -9,20 +9,21 @@ public class CharBehaviour : MonoBehaviour {
 	[SerializeField]
 	private int maxCapacity = 10;
 	Animator animator;
+	ApplicationController controller;
     private float xLeftBoundary;
     private float xRightBoundary;
 
     void Start () {
 		animator = GetComponent<Animator>();
+		controller = ApplicationController.Instance;
 		setBoundaries();
 	}
 	void setBoundaries(){
 		float spriteWidth = GetComponent<SpriteRenderer>().bounds.size.x/2;
-		xLeftBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.x+spriteWidth;
-		xRightBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x-spriteWidth;
+		xLeftBoundary = controller.lowerLeftBoundary.transform.position.x+spriteWidth;
+		xRightBoundary = controller.bathroomAreaUpperLeftBoundary.transform.position.x-spriteWidth;
 	}
 	
-	// Update is called once per frame 
 	void Update () {
 		Move();
 		SetCupState();
@@ -35,27 +36,26 @@ public class CharBehaviour : MonoBehaviour {
 			transform.position += new Vector3(speed * Time.deltaTime,0,0);
 		}
 	}
-
 	void SetCupState(){
-		if(ApplicationController.Instance.score <= maxCapacity){
-			if(ApplicationController.Instance.score == maxCapacity){
+		if(controller.score <= maxCapacity){
+			if(controller.score == maxCapacity){
 				animator.SetTrigger("toTheBrimFull");
 			}
-			if(ApplicationController.Instance.score > maxCapacity/2){
+			if(controller.score > maxCapacity/2){
 				animator.SetTrigger("almostFull");
 			}
-			if(ApplicationController.Instance.score > maxCapacity/4){
+			if(controller.score > maxCapacity/4){
 				animator.SetTrigger("halfFull");
 			}
-			if(ApplicationController.Instance.score > 0){
+			if(controller.score > 0){
 				animator.SetTrigger("firstBlood");
 			}
-			if(ApplicationController.Instance.score == 0){
+			if(controller.score == 0){
 				animator.SetTrigger("emptyCup");
 			}
 		}else{
 			animator.SetTrigger("spill");
-			//Game Ovaries
+			controller.isRunning = false;
 		}
 	}
 

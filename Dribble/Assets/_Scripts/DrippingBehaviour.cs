@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class DrippingBehaviour : MonoBehaviour {
 	Animator animator;
+	ApplicationController controller;
 
 	void Start(){
 		animator = GetComponent<Animator>();
+		controller = ApplicationController.Instance;
 	}
 
 	void OnTriggerEnter2D(Collider2D collision){
@@ -16,6 +18,7 @@ public class DrippingBehaviour : MonoBehaviour {
 		}else{
 			Destroy(GetComponent<Rigidbody2D>());
 			animator.SetTrigger("scatter");
+			controller.isRunning = false;
 		}
 		
 	}

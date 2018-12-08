@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class ApplicationController : Singleton<ApplicationController> {
 
 	[SerializeField]
-	float startTime;
-	private float remainingTime;
 	public int score;
-	public string character;
 	public Text scoreText;
     public GameObject lowerLeftBoundary;
 	public GameObject upperRightBoundary;
 	public GameObject bathroomAreaUpperLeftBoundary;
-
+	public string character;
+	public bool isRunning;
 
     // Use this for initialization
-    void Start () {}
+    void Start () {
+		isRunning = true;
+	}
 
 	public void IncreaseScore(){
 		score++;

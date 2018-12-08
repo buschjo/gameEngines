@@ -3,16 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpawnBathrooms : MonoBehaviour {
+	ApplicationController controller;
 	public GameObject maleBathroomIcon;
 	public GameObject femaleBathroomIcon;
 	public GameObject nbBathroomIcon;
-	public float timeRemaining;
     private float xLeftBoundary;
     private float xRightBoundary;
     private float yUpperBoundary;
     private float yLowerBoundary;
 
     void Start () {
+		controller = ApplicationController.Instance;
 		setBoundaries();
 		StartCoroutine(Spawn());
 	}
@@ -20,15 +21,15 @@ public class SpawnBathrooms : MonoBehaviour {
 	void setBoundaries(){
 		float spriteWidth = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.x;
 		float spriteHeight = maleBathroomIcon.GetComponent<Renderer>().bounds.extents.y;
-		xLeftBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.x+spriteWidth;
-		xRightBoundary = ApplicationController.Instance.upperRightBoundary.transform.position.x-spriteWidth;
-		yUpperBoundary = ApplicationController.Instance.bathroomAreaUpperLeftBoundary.transform.position.y-spriteHeight;
-		yLowerBoundary = ApplicationController.Instance.lowerLeftBoundary.transform.position.y+spriteHeight;
+		xLeftBoundary = controller.bathroomAreaUpperLeftBoundary.transform.position.x+spriteWidth;
+		xRightBoundary = controller.upperRightBoundary.transform.position.x-spriteWidth;
+		yUpperBoundary = controller.bathroomAreaUpperLeftBoundary.transform.position.y-spriteHeight;
+		yLowerBoundary = controller.lowerLeftBoundary.transform.position.y+spriteHeight;
 	}
 
 	IEnumerator Spawn(){
 		yield return new WaitForSeconds (2.0f);
-		while(timeRemaining > 0){
+		while(controller.isRunning){
 			instantiateBathroom(new Vector3(Random.Range(xLeftBoundary, xRightBoundary), Random.Range(yLowerBoundary, yUpperBoundary),0.0f));			
 			yield return new WaitForSeconds(Random.Range(1.0f, 2.0f));
 		}
