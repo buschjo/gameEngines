@@ -4,50 +4,34 @@ using UnityEngine;
 
 public class BathroomBehaviour : MonoBehaviour
 {
-
-    GameObject maleIcon;
-    GameObject femaleIcon;
-    GameObject nbIcon;
-    string character = ApplicationController.Instance.character;
+    string character;
 
     // Use this for initialization
     void Start()
     {
-        maleIcon = GameObject.FindGameObjectWithTag("maleBathroom");
-        femaleIcon = GameObject.FindGameObjectWithTag("femaleBathroom");
-        nbIcon = GameObject.FindGameObjectWithTag("nbBathroom");
+        character = ApplicationController.Instance.character;
     }
 
     void OnMouseDown()
     {
-        if (character == "female")
-        {
-            if (femaleIcon || nbIcon) ApplicationController.Instance.EmptyCup();
-            else
-            {
-                print("gameOvaries (female)");
-                ApplicationController.Instance.isRunning = false;
-            }
+        if(character == "female"){
+            if (tag == "femaleBathroom" || tag == "nbBathroom") ApplicationController.Instance.EmptyCup();
+            else{GameOver();}
         }
-        else if (character == "male")
-        {
-            if (maleIcon || nbIcon) ApplicationController.Instance.EmptyCup();
-            else
-            {
-                print("gameOvaries (male)");
-                ApplicationController.Instance.isRunning = false;
-            }
+        else if(character =="male"){
+            if (tag == "maleBathroom" || tag == "nbBathroom") ApplicationController.Instance.EmptyCup();
+            else{GameOver();}
         }
-        else if (character == "non-binary")
-        {
-            if (nbIcon) ApplicationController.Instance.EmptyCup();
-            else
-            {
-                print("gameOvaries (nb)");
-                ApplicationController.Instance.isRunning = false;
-            }
+        else if(character =="non-binary"){
+            if (tag == "nbBathroom") ApplicationController.Instance.EmptyCup();
+            else{GameOver();}    
         }
         DestroyObject();
+    }
+
+    void GameOver(){
+        print("gameOvaries " + character);
+        ApplicationController.Instance.isRunning = false;
     }
 
     void DestroyObject()
