@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour {
 
 	GameObject[] pauseObjects;
 	GameObject[] gameOverObjects;
+	ApplicationController controller;
 
 	void Start () {
 		ApplicationController.Instance.isRunning = true;

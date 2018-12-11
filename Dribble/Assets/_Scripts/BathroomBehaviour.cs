@@ -30,7 +30,6 @@ public class BathroomBehaviour : MonoBehaviour
     }
 
     void GameOver(){
-        print("gameOvaries " + character);
         ApplicationController.Instance.isRunning = false;
     }
 
