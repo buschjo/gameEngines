@@ -8,6 +8,22 @@ public class MenuController : MonoBehaviour {
 
     [SerializeField]
     private Button playButton;
+    GameObject femaleDesc;
+    GameObject maleDesc;
+    GameObject nbDesc;
+    public GameObject maleButtonIcon;
+	public GameObject femaleButtonIcon;
+	public GameObject nbButtonIcon;
+
+    public void Start()
+    {
+        femaleDesc = GameObject.FindGameObjectWithTag("femaleBathroom");
+        maleDesc = GameObject.FindGameObjectWithTag("maleBathroom");
+        nbDesc = GameObject.FindGameObjectWithTag("nbBathroom");
+        femaleDesc.SetActive(false);
+        maleDesc.SetActive(false);
+        nbDesc.SetActive(false);
+    }
 
     public void StartGame()
     {
@@ -17,21 +33,28 @@ public class MenuController : MonoBehaviour {
 	public void ChooseFemale()
     {
         Statics.SetCharacter("female");
-        Debug.Log("Choose: " + Statics.GetCharacter());
+        femaleDesc.SetActive(true);
+        maleButtonIcon.SetActive(false);
+        nbButtonIcon.SetActive(false);
         playButton.interactable = true;
     }
 
     public void ChooseMale()
     {
         Statics.SetCharacter("male");
-        Debug.Log("Choose: " + Statics.GetCharacter());
+        maleDesc.SetActive(true);
+        femaleButtonIcon.SetActive(false);
+        nbButtonIcon.SetActive(false);
         playButton.interactable = true;
     }
 
     public void ChooseNB()
     {
         Statics.SetCharacter("non-binary");
-        Debug.Log("Choose: " + Statics.GetCharacter());
+        nbDesc.SetActive(true);
+        femaleButtonIcon.SetActive(false);
+        maleButtonIcon.SetActive(false);
         playButton.interactable = true;
     }
+
 }
