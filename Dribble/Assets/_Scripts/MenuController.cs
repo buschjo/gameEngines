@@ -80,6 +80,7 @@ public class MenuController : MonoBehaviour
     {
         deactivateDescriptions();
         activateIcons();
+        playButton.interactable = false;
     }
 
     void deactivateDescriptions()
