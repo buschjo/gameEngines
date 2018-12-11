@@ -28,10 +28,10 @@ public class CharBehaviour : MonoBehaviour {
 	}
 	
 	void Move(){
-		if(Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.A) && transform.position.x >= xLeftBoundary){
+		if(Input.GetKey(KeyCode.LeftArrow) && transform.position.x >= xLeftBoundary || Input.GetKey(KeyCode.A) && transform.position.x >= xLeftBoundary){
 			transform.position -= new Vector3(speed * Time.deltaTime,0,0);
 		}
-		if(Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D) && transform.position.x <= xRightBoundary){
+		if(Input.GetKey(KeyCode.RightArrow) && transform.position.x <= xRightBoundary || Input.GetKey(KeyCode.D) && transform.position.x <= xRightBoundary){
 			transform.position += new Vector3(speed * Time.deltaTime,0,0);
 		}
 	}
